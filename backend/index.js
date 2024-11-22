@@ -10,6 +10,8 @@ require('dotenv').config()
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(cors());
+
 const mediaPath = path.join(__dirname, "media");
 if (!fs.existsSync(mediaPath)) {
   fs.mkdirSync(mediaPath);
@@ -26,7 +28,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.use(cors());
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/', (req, res) => {
