@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+.highlight{
+    border-color: red;
+}
+th, td{
+    border: 2px solid black;
+}
