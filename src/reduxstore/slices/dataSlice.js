@@ -93,7 +93,7 @@ export const fetchData = createAsyncThunk(
   async (formData) => {
     const response = await axios.post(`${apiUrl}/upload`, formData);
     addRelation(response.data);
-    console.log(response.data)
+    // console.log(response.data)
     return response.data;
   }
 );

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { fetchData } from '../reduxstore/slices/dataSlice';
 import { useDispatch } from 'react-redux';
+import './FileUpload.css';
 
 export default function FileUpload() {
     const [selectedFile, setSelectedFile] = useState(null);
